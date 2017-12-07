@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PongController {
 
   @RequestMapping(value = "/pong", method = RequestMethod.GET)
-  @CrossOrigin(value = "*") //TODO change me!
+  @CrossOrigin(origins = "http://localhost:3000") //TODO change me!
   public String pong() {
     return "pong";
   }
