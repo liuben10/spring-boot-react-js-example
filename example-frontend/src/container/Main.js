@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import axios from 'axios';
 
 class Main extends Component {
 
   ping() {
-    console.log("Ping was clicked!");
+    axios.get("http://localhost:8080/pong").then(res => {
+      alert("Received Successful response from server!");
+    }, err => {
+      alert("Server rejected response with: " + err);
+    });
   }
 
   render() {
