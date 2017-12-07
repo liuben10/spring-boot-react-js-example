@@ -24,3 +24,5 @@ nbdist/
 .nb-gradle/
 
 .mvn
+node_modules
+yarn.lock
